@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
@@ -6,6 +8,7 @@ import '../../const/color.dart';
 import '../../const/image_assets.dart';
 import '../../controller/on_boarding.dart';
 import '../../widgets/custom_text.dart';
+import '../Auth/login_view.dart';
 
 class OnBoarding extends StatefulWidget {
   const OnBoarding({super.key});
@@ -60,7 +63,7 @@ class OnBoardingOne extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              InterCustomText(
+              PretendardCustomText(
                 textColor: primaryColor,
                 fontsize: 26.sp,
                 text: 'Top Local Influencer\nat one place',
@@ -69,7 +72,7 @@ class OnBoardingOne extends StatelessWidget {
               SizedBox(
                 height: 15.h,
               ),
-              InterCustomText(
+              PretendardCustomText(
                 textColor: Color(0xff3B3B3B),
                 fontsize: 15.sp,
                 text:
@@ -88,7 +91,7 @@ class OnBoardingOne extends StatelessWidget {
                         color: primaryColor,
                         borderRadius: BorderRadius.circular(13.r)),
                     child: Center(
-                      child: InterCustomText(
+                      child: PretendardCustomText(
                         textColor: whiteColor,
                         fontsize: 16.sp,
                         text: 'Get started',
@@ -119,12 +122,14 @@ class OnBoardingTwo extends StatelessWidget {
               AppImages.onboardingvector,
               height: 224,
             )),
-        InterCustomText(
-          textAlign: TextAlign.center,
-          textColor: primaryColor,
-          fontsize: 22.sp,
-          text: 'Please select one of the following user type options',
-          fontWeight: FontWeight.w700,
+        Center(
+          child: PretendardCustomText(
+            textAlign: TextAlign.center,
+            textColor: primaryColor,
+            fontsize: 22.sp,
+            text: 'Please select one of the\nfollowing user type options',
+            fontWeight: FontWeight.w700,
+          ),
         ),
         SizedBox(
           height: 99.h,
@@ -133,7 +138,7 @@ class OnBoardingTwo extends StatelessWidget {
           padding: EdgeInsets.only(left: 24.w),
           child: Column(
             children: [
-              InterCustomText(
+              PretendardCustomText(
                 textAlign: TextAlign.start,
                 textColor: const Color(0xff3A3838),
                 fontsize: 16.sp,
@@ -141,19 +146,54 @@ class OnBoardingTwo extends StatelessWidget {
                     'Do you want to  promote your products, services through influencers?',
                 fontWeight: FontWeight.w400,
               ),
-              Row(
-                children: [
-                  Container(
-                    width: 265.w,
-                    height: 36.h,
-                    decoration: BoxDecoration(color: Color(0xff02CBC4)),
-                  ),
-                  Image.asset(
-                    AppImages.onboardingbutton,
-                    height: 69.h,
-                    width: 64.w,
-                  ),
-                ],
+              SizedBox(
+                height: 20.h,
+              ),
+              GestureDetector(
+                onTap: () {
+Get.to(LoginView());
+                },
+                child: Row(
+                  children: [
+                    Stack(
+                      clipBehavior: Clip.none,
+                      children: [
+                        Container(
+                          width: 280.w,
+                          height: 36.h,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.r),
+                              gradient: LinearGradient(
+                                  colors: [Color(0xff02CBC4), Color(0xff01CBA7)],
+                                  begin: Alignment.topRight,
+                                  end: Alignment.topLeft)),
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 12.w, top: 8.h),
+                            child: PretendardCustomText(
+                              text: 'Customer',
+                              textColor: whiteColor,
+                              fontWeight: FontWeight.w500,
+                              fontsize: 16.sp,
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          right: -30,
+                          top: -16,
+                          child: Container(
+                            // color: Colors.red,
+                            child: Image.asset(
+                              fit: BoxFit.fill,
+                              AppImages.onboardingbutton,
+                              height: 69.h,
+                              width: 64.w,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
@@ -165,7 +205,7 @@ class OnBoardingTwo extends StatelessWidget {
           padding: EdgeInsets.only(left: 24.w),
           child: Column(
             children: [
-              InterCustomText(
+              PretendardCustomText(
                 textAlign: TextAlign.start,
                 textColor: const Color(0xff3A3838),
                 fontsize: 16.sp,
@@ -173,17 +213,47 @@ class OnBoardingTwo extends StatelessWidget {
                     'Do you want to make economic profits by introducing advertisers’ products?',
                 fontWeight: FontWeight.w400,
               ),
+              SizedBox(
+                height: 20.h,
+              ),
               Row(
                 children: [
-                  Container(
-                    width: 265.w,
-                    height: 36.h,
-                    decoration: BoxDecoration(color: Color(0xff02CBC4)),
-                  ),
-                  Image.asset(
-                    AppImages.onboardingbutton,
-                    height: 69.h,
-                    width: 64.w,
+                  Stack(
+                    clipBehavior: Clip.none,
+                    children: [
+                      Container(
+                        width: 280.w,
+                        height: 36.h,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8.r),
+                            gradient: LinearGradient(
+                                colors: [Color(0xff02CBC4), Color(0xff01CBA7)],
+                                begin: Alignment.topRight,
+                                end: Alignment.topLeft)),
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 12.w, top: 8.h),
+                          child: PretendardCustomText(
+                            text: 'Creator',
+                            textColor: whiteColor,
+                            fontWeight: FontWeight.w500,
+                            fontsize: 16.sp,
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        right: -30,
+                        top: -16,
+                        child: Container(
+                          // color: Colors.red,
+                          child: Image.asset(
+                            fit: BoxFit.fill,
+                            AppImages.onboardingbutton,
+                            height: 69.h,
+                            width: 64.w,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),

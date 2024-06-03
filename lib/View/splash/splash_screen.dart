@@ -40,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
           SizedBox(
             height: 10.h,
           ),
-          InterCustomText(
+          PretendardCustomText(
             text: 'Imfact',
             textColor: redColor,
             fontWeight: FontWeight.w700,

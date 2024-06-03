@@ -1,0 +1,1 @@
+ C:\\OfficeWork\\New\ folder\\imfact_app\\.dart_tool\\flutter_build\\04b290d99e601f49b94e2cef47daf6c8\\native_assets.yaml: 
