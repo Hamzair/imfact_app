@@ -110,34 +110,98 @@ class OnBoardingTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     OnBoardingController boardingVM = Get.find<OnBoardingController>();
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 22.w),
-      child: Column(
-        children: [
-          SizedBox(height: 58.h,),
-          InterCustomText(
-            textAlign: TextAlign.center,
-            textColor: primaryColor,
-            fontsize: 22.sp,
-            text: 'Please select one of the following user type options',
-            fontWeight: FontWeight.w700,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+            alignment: Alignment.topRight,
+            child: Image.asset(
+              AppImages.onboardingvector,
+              height: 224,
+            )),
+        InterCustomText(
+          textAlign: TextAlign.center,
+          textColor: primaryColor,
+          fontsize: 22.sp,
+          text: 'Please select one of the following user type options',
+          fontWeight: FontWeight.w700,
+        ),
+        SizedBox(
+          height: 99.h,
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 24.w),
+          child: Column(
+            children: [
+              InterCustomText(
+                textAlign: TextAlign.start,
+                textColor: const Color(0xff3A3838),
+                fontsize: 16.sp,
+                text:
+                    'Do you want to  promote your products, services through influencers?',
+                fontWeight: FontWeight.w400,
+              ),
+              Row(
+                children: [
+                  Container(
+                    width: 265.w,
+                    height: 36.h,
+                    decoration: BoxDecoration(color: Color(0xff02CBC4)),
+                  ),
+                  Image.asset(
+                    AppImages.onboardingbutton,
+                    height: 69.h,
+                    width: 64.w,
+                  ),
+                ],
+              ),
+            ],
           ),
-          SizedBox(
-            height: 99.h,
+        ),
+        SizedBox(
+          height: 40.h,
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 24.w),
+          child: Column(
+            children: [
+              InterCustomText(
+                textAlign: TextAlign.start,
+                textColor: const Color(0xff3A3838),
+                fontsize: 16.sp,
+                text:
+                    'Do you want to make economic profits by introducing advertisers’ products?',
+                fontWeight: FontWeight.w400,
+              ),
+              Row(
+                children: [
+                  Container(
+                    width: 265.w,
+                    height: 36.h,
+                    decoration: BoxDecoration(color: Color(0xff02CBC4)),
+                  ),
+                  Image.asset(
+                    AppImages.onboardingbutton,
+                    height: 69.h,
+                    width: 64.w,
+                  ),
+                ],
+              ),
+            ],
           ),
-          InterCustomText(
-            textAlign: TextAlign.start,
-            textColor: const Color(0xff3A3838),
-            fontsize: 16.sp,
-            text: 'Do you want to  promote your products, services through influencers?',
-            fontWeight: FontWeight.w400,
-          ),
-          SizedBox(
-            height: 40.h,
-          ),
+        ),
+        Spacer(),
+        Container(
+            alignment: Alignment.bottomLeft,
+            height: 120.h,
+            width: 151.w,
 
-        ],
-      ),
+            // color: Colors.pink,
+            child: Image.asset(
+              // fit: BoxFit.contain,
+              AppImages.onboardingvector2,
+            )),
+      ],
     );
   }
 }

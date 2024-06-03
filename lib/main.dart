@@ -15,7 +15,9 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
         designSize: const Size(360, 800),
         builder: (_, child) {
+
           return GetMaterialApp(
+
             debugShowCheckedModeBanner: false,
             home: const SplashScreen(),
           );
