@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:imfact_influencer_marketplace/View/Auth/signup_view/signup.dart';
+import 'package:imfact_influencer_marketplace/View/bottom_nav_bar.dart';
 import 'package:imfact_influencer_marketplace/const/image_assets.dart';
 import 'package:imfact_influencer_marketplace/const/svg_assets.dart';
 
@@ -103,7 +104,7 @@ class _LoginViewState extends State<LoginView> {
                               context, const ForgetPasswordView());
                         },
                         child: PretendardCustomText(
-                          text: "Forget password?",
+                          text: "Forgot password?",
                           textColor: primaryColor,
                           fontWeight: FontWeight.w500,
                           fontsize: 14.sp,
@@ -121,7 +122,10 @@ class _LoginViewState extends State<LoginView> {
                         textSize: 19.sp,
                         height: 51.h,
                         title: "Login",
-                        onTap: () {});
+                        onTap: () {
+
+                          Get.to(() =>Navbar());
+                        });
                   })
 
                 ],

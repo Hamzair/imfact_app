@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:imfact_influencer_marketplace/View/on_boarding/welcome_screen.dart';
 import '../../const/color.dart';
 import '../../const/image_assets.dart';
+import '../../const/text_styles.dart';
 import '../../widgets/custom_text.dart';
 import '../on_boarding/on_boarding_screens.dart';
 
@@ -19,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     Future.delayed(const Duration(seconds: 2), () {
-      Get.to(OnBoarding());
+      Get.to(() => WelcomeScreen());
 
     });
   }
@@ -40,12 +42,8 @@ class _SplashScreenState extends State<SplashScreen> {
           SizedBox(
             height: 10.h,
           ),
-          PretendardCustomText(
-            text: 'Imfact',
-            textColor: redColor,
-            fontWeight: FontWeight.w700,
-            fontsize: 48.sp,
-          )
+          Text("Imfact" , style: pretendardWithColor( redColor , 48.sp),),
+
         ],
       ),
     );

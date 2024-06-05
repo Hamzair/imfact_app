@@ -10,8 +10,7 @@ class AuthController extends GetxController {
   RxString profileURL = "".obs;
   RxString authPhoneNumber = "".obs;
   Rx<File> profilePic = File("").obs;
-  Rx<File> idCardFrontPic = File("").obs;
-  Rx<File> idCardBackPic = File("").obs;
+
   RxString verificationIdCode = "".obs;
   RxString level = "".obs;
   RxString completePhoneNumber = "".obs;

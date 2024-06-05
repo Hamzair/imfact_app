@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:imfact_influencer_marketplace/widgets/custom_button.dart';
 
 import '../../const/color.dart';
 import '../../const/image_assets.dart';
@@ -82,23 +83,31 @@ class OnBoardingOne extends StatelessWidget {
               SizedBox(
                 height: 52.h,
               ),
-              GestureDetector(
-                onTap: () => boardingVM.nextPage(),
-                child: Container(
-                    width: 310.w,
-                    height: 53.h,
-                    decoration: BoxDecoration(
-                        color: primaryColor,
-                        borderRadius: BorderRadius.circular(13.r)),
-                    child: Center(
-                      child: PretendardCustomText(
-                        textColor: whiteColor,
-                        fontsize: 16.sp,
-                        text: 'Get started',
-                        fontWeight: FontWeight.w500,
-                      ),
-                    )),
-              ),
+
+              CustomButton(
+                width: 310.w,
+                height: 53.h,
+                borderRadius: 13.r,
+                buttonText: 'Get started', onPressed: () {
+
+              },),
+              // GestureDetector(
+              //   onTap: () => boardingVM.nextPage(),
+              //   child: Container(
+              //       width: 310.w,
+              //       height: 53.h,
+              //       decoration: BoxDecoration(
+              //           color: primaryColor,
+              //           borderRadius: BorderRadius.circular(13.r)),
+              //       child: Center(
+              //         child: PretendardCustomText(
+              //           textColor: whiteColor,
+              //           fontsize: 16.sp,
+              //           text: 'Get started',
+              //           fontWeight: FontWeight.w500,
+              //         ),
+              //       )),
+              // ),
             ],
           ),
         )

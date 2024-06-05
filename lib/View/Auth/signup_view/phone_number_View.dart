@@ -47,10 +47,11 @@ class _PhoneNumberViewState extends State<PhoneNumberView> {
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
             SizedBox(
-              height: 50.h,
+              height: 70.h,
             ),
             PretendardCustomText(
-              text: "What's Your Mobile\nNumber",
+              text: "What's Your Mobile\nNumber?",
+              textAlign: TextAlign.center,
               fontsize: 24.sp,
               textColor: primaryColor,
               fontWeight: FontWeight.bold,

@@ -22,6 +22,7 @@ class _SignUpViewState extends State<SignUpView> {
   final nameController = TextEditingController();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+  final confirmController = TextEditingController();
 
   AuthController _authController = Get.put(AuthController());
   bool isChecked = true;
@@ -170,13 +171,14 @@ class _SignUpViewState extends State<SignUpView> {
                 onChange: (v) {
                   _authController.update();
                   _authController.refresh();
+
                 },
                 readOnly: _authController.fromLogin.value ?? false,
                 controller: nameController,
                 hintText: 'Your name',
                 hintColor: Colors.grey,
                 hintTextSize: 11.sp,
-                prefixIcon: AppImages.passwordIcon,
+                prefixIcon: AppImages.personIcon,
                 isBorder: true,
                 borderRadius: 13.sp,
                 fillColor: Colors.transparent,
@@ -206,6 +208,33 @@ class _SignUpViewState extends State<SignUpView> {
                 readOnly: false,
                 controller: passwordController,
                 hintText: 'Your password',
+                hintColor: Colors.grey,
+                hintTextSize: 11.sp,
+                onChange: (v) {
+                  _authController.update();
+                  _authController.refresh();
+                },
+                prefixIcon: AppImages.passwordIcon,
+                isBorder: true,
+                isPassword: true,
+                isObscure: isChecked,
+                passwordFunction: () {
+                  setState(() {
+                    isChecked = !isChecked;
+                  });
+                },
+                borderRadius: 13.sp,
+                fillColor: Colors.transparent,
+                beforePasswordIcon: Icons.visibility_off_outlined,
+                afterPasswordIcon: Icons.visibility,
+              ),
+              SizedBox(
+                height: 30.h,
+              ),
+              CustomTextFiled(
+                readOnly: false,
+                controller: confirmController,
+                hintText: 'Confirm password',
                 hintColor: Colors.grey,
                 hintTextSize: 11.sp,
                 onChange: (v) {
