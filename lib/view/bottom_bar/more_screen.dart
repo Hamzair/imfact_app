@@ -19,7 +19,7 @@ class _MoreScreenState extends State<MoreScreen> {
           child: Column(
             children: [
               Row(children: [
-                Image.asset(AppImages.splash , height: 25.h, width: 25.w,) ,
+                Image.asset(AppImages.splash , height: 25.h, width: 25.w) ,
 
               ],)
             ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'View/create_campaign/basic_info.dart';
 import 'View/splash/splash_screen.dart';
 import 'controller/bottombar_controller.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData( fontFamily: 'Pretendard'),
 
             debugShowCheckedModeBanner: false,
-            home: const SplashScreen(),
+            home: const BasicInfo(),
           );
 
         });
