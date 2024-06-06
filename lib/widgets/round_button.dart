@@ -14,7 +14,7 @@ class RoundButton extends StatelessWidget {
   Color? color;
   Color? titleColor;
   RoundButton(
-      {Key? key,
+      {super.key,
         required this.title,
         required this.onTap,
         this.loading = false,
@@ -23,8 +23,7 @@ class RoundButton extends StatelessWidget {
         this.radius,
         this.textSize,
         this.color,
-        this.titleColor})
-      : super(key: key);
+        this.titleColor});
   // final _controller=Get.put(BackendController());
   @override
   Widget build(BuildContext context) {

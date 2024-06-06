@@ -19,3 +19,9 @@ const  redColor=Color(0xffFE0000);
 const  greyColor=Colors.grey;
 const  blackTitleColor=Color(0xff263238);
 const  lightTitleColor=Color(0xff898989);
+
+//Create Campaign Colors
+const  greyShadeColor=Color(0xff737373);
+const  dividerColor=Color(0xffE5E5E5);
+const  campaignTextTypeColor=Color(0xff424242);
+const  containerBackgroundColor=Color(0xffF3F3F3);
